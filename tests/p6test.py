@@ -1,10 +1,12 @@
 import unittest
-from papk.p6 import countWords
+from papk.p6 import ploshad
 
 class TestsOfWordsCounter(unittest.TestCase): # создаем класс тестирования наследующий класс юнит тестов
-    def testOneWord(self): # проверка на одно слово
-        self.assertEqual("Hello", 1) 
-    def testTwoWords(self): # проверка на два слова
-        self.assertEqual("Hello, World!", 2)
-    def testNoneWords(self): # проверка на отсутствие слов
-        self.assertEqual("", 0)
+    def test_otric_len(self):
+        self.assertEqual(ploshad(-1, 2), "длина не может быть отрицательной") # проверка на отрицательность длины
+    def test_null_len(self):
+        self.assertEqual(ploshad(-1, 2), "длина не может равняться нулю") # проверка на то, является ли длина нулем
+    def test_otric_wid(self):
+        self.assertEqual(ploshad(2, -1), "длина не может быть отрицательной") # проверка на отрицательность ширины
+    def test_null_wid(self):
+        self.assertEqual(ploshad(2, -1), "длина не может равняться нулю") # проверка на то, является ли ширина нулем
