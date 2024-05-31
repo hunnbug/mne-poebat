@@ -1,0 +1,21 @@
+[tool.pylint.format]
+expected-line-ending-format = 'LF'
+ignore-long-lines = false
+max-line-length = 79
+
+[tool.pylint.main]
+jobs = 0
+py-version = [3, 7]
+
+[tool.pylint.messages-control]
+disable = [
+'import-error',
+'missing-class-docstring',
+'missing-function-docstring',
+'missing-module-docstring',
+'too-few-public-methods',
+]
+
+[tool.pylint.string]
+check-quote-consistency = true
+check-str-concat-over-line-jumps = true
